@@ -63,7 +63,7 @@ function sortearAmigo() {
     // Obtenemos el elemento resultado por el id
     const resultado = document.getElementById('resultado');
 
-    // Limpiar resultados anteriores para no acumular texto repetido
+    // Se limpian resultados anteriores para no acumular texto repetido
     resultado.innerHTML = '';
 
     //Copiar el array de amigos para no modificar el original
