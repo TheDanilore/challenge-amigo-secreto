@@ -24,12 +24,14 @@ function agregarAmigo() {
     //Validaciones
     if (nombreAmigo === '') {
         // Muestra una alerta si el nombre está vacío
-        return alert("Debes ingresar un nombre");
+        alert("Debes ingresar un nombre");
+        return;
     }
 
     if (amigos.includes(nombreAmigo)) {
         // Muestra una alerta si el nombre ya está en la lista
-        return alert("Este nombre ya está en la lista");
+        alert("Este nombre ya está en la lista");
+        return;
     }
 
     // Se agrega el nombre al array de amigos
@@ -41,21 +43,30 @@ function agregarAmigo() {
     input.value = '';
 }
 
+// Función para limpiar la lista de amigos en pantalla y el array
+function limpiarListaAmigos() {
+    document.getElementById('listaAmigos').innerHTML = ''; // Elimina todos los <li>
+    amigos = []; // Vacía el array de amigos
+}
+
 // Funcion para sortear amigos
 function sortearAmigo() {
     // Validación para asegurarse de que hay al menos dos amigos en la lista
     if (amigos.length < 2) {
-        return alert("Necesitas al menos dos amigos para sortear");
+        alert("Necesitas al menos dos amigos para sortear");
+        return;
     }
 
-    // Limpiar resultados anteriores
+    // Obtenemos el elemento resultado por el id
     const resultado = document.getElementById('resultado');
+
+    // Limpiar resultados anteriores para no acumular texto repetido
     resultado.innerHTML = '';
 
     //Copiar el array de amigos para no modificar el original
     const amigosCopia = [...amigos];
 
-    // Mezclar el array de amigos para que el sorteo sea aleatorio
+    // Mezclar el array de amigos para que el sorteo sea aleatorio (algoritmo de Fisher-Yates)
     for (let i = amigosCopia.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [amigosCopia[i], amigosCopia[j]] = [amigosCopia[j], amigosCopia[i]]
@@ -67,4 +78,6 @@ function sortearAmigo() {
     // Mostrar el resultado en la lista de resultados
     asignarTextoLista('resultado', `Tu amigo secreto es: ${amigoSecreto}`);
 
+    // Limpiar la lista de amigos de la vista y del array
+    limpiarListaAmigos();
 }
