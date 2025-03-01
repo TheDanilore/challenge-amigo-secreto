@@ -34,6 +34,9 @@ function agregarAmigo() {
         return;
     }
 
+    // Se limpia el resultado si se agrega un nuevo amigo
+    document.getElementById('resultado').innerHTML = '';
+
     // Se agrega el nombre al array de amigos
     amigos.push(nombreAmigo);
     // Se llama a la funcion y se le envia los siguientes parametros
