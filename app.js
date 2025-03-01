@@ -16,9 +16,14 @@ function asignarTextoElemento(elemento, texto) {
 function agregarAmigo(){
     //Se obtiene el nombre que se escribio en el input
     const input = document.getElementById('amigo');
+
     //Se le asigna el nombre en string a la variable nombreAmigo
     const nombreAmigo = input.value.trim();
 
+    if(nombreAmigo == ''){
+        return alert("Debes ingresar un nombre")
+    }
+    
     asignarTextoElemento('listaAmigos', `${nombreAmigo}`);
     //Se limpia el input
     input.value = '';
