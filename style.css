@@ -106,6 +106,7 @@ body {
 
 /* Estilos de botón */
 button {
+    transition: transform 0.2s ease, background-color 0.4s ease;
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
@@ -113,6 +114,14 @@ button {
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 .button-add {
@@ -134,6 +143,7 @@ ul {
     margin: 20px 0;
 }
 
+/* Lista del resultado sorteado */
 .result-list {
     margin-top: 15px;
     color: #05DF05;
@@ -160,3 +170,43 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+/* Efectos */
+/* Al agregar un nuevo amigo a la lista*/
+.name-list li {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cuando se realiza el sorteo */
+.loading {
+    font-weight: bold;
+    font-size: 1.2em;
+    animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+

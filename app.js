@@ -48,7 +48,17 @@ function agregarAmigo() {
 
 // Función para limpiar la lista de amigos en pantalla y el array
 function limpiarListaAmigos() {
-    document.getElementById('listaAmigos').innerHTML = ''; // Elimina todos los <li>
+    const lista = document.getElementById('listaAmigos'); // Elimina todos los <li>
+
+    // Agregar animación de desaparición
+    lista.style.transition = "opacity 0.5s ease-out";
+    lista.style.opacity = "0";
+
+    setTimeout(() => {
+        lista.innerHTML = ''; // Eliminar elementos después de la animación
+        lista.style.opacity = "1"; // Restablecer opacidad
+    }, 500);
+
     amigos = []; // Vacía el array de amigos
 }
 
@@ -78,8 +88,14 @@ function sortearAmigo() {
     // Seleccionar un amigo secreto aleatorio
     const amigoSecreto = amigosCopia[Math.floor(Math.random() * amigosCopia.length)];
 
-    // Mostrar el resultado en la lista de resultados
-    asignarTextoLista('resultado', `Tu amigo secreto es: ${amigoSecreto}`);
+    // Efecto de "suspenso" antes de mostrar el resultado
+    resultado.innerHTML = '<li class="loading">🤔 Sorteando...</li>';
+
+    // Retrasa un tiempo determinado
+    setTimeout(() => {
+        // Mostrar el resultado en la lista de resultados
+        resultado.innerHTML = `<li class="fade-in">🎁 Tu amigo secreto es: ${amigoSecreto}</li>`;
+    }, 2000); // Espera 2 segundos para el suspenso
 
     //Limpiar la lista de amigos de la vista y del array
     limpiarListaAmigos();
