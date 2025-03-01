@@ -78,6 +78,6 @@ function sortearAmigo() {
     // Mostrar el resultado en la lista de resultados
     asignarTextoLista('resultado', `Tu amigo secreto es: ${amigoSecreto}`);
 
-    // Limpiar la lista de amigos de la vista y del array
+    //Limpiar la lista de amigos de la vista y del array
     limpiarListaAmigos();
 }
