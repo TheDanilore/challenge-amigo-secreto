@@ -3,11 +3,16 @@
 Este proyecto es parte del **Challenge Amigo Secreto** del programa **ONE G8 (Oracle Next Education)** de **Alura Latam y Oracle**.  
 Se trata de una aplicación en JavaScript que permite agregar nombres a una lista y seleccionar aleatoriamente un amigo secreto.
 
-![Captura de pantalla 2025-02-28 230253](https://github.com/user-attachments/assets/924123fe-33d6-4445-a884-c07af01de195)
-![Captura de pantalla 2025-02-28 230304](https://github.com/user-attachments/assets/2916b97d-ddaa-4a55-a8c3-1795b77709f4)
-
+![Captura de pantalla 2025-02-28 233733](https://github.com/user-attachments/assets/982fabca-7d46-4418-ad9d-e37d2f70837e)
+![Captura de pantalla 2025-02-28 233744](https://github.com/user-attachments/assets/879728ec-8b2c-4c59-ada5-8f3cb8db90e0)
 
 ---
+
+## 📜 Tecnologías utilizadas
+
+- HTML5 para la estructura.
+- CSS3 para el diseño y animaciones.
+- JavaScript para la lógica de la aplicación.
 
 ## 📌 Funcionamiento del Sorteo
 
@@ -62,6 +67,26 @@ const amigoSecreto = amigosCopia[Math.floor(Math.random() * amigosCopia.length)]
 | 0.123        | 0.492            | 0            | `amigosCopia[0]` | `"Ana"`          |
 | 0.678        | 2.712            | 2            | `amigosCopia[2]` | `"Carlos"`       |
 | 0.987        | 3.948            | 3            | `amigosCopia[3]` | `"Elena"`        |
+
+## 🎨 Animaciones y efectos
+
+Para hacer la experiencia más dinámica, se han agregado varias animaciones al proyecto:
+
+### 1️⃣ Animación al agregar un amigo
+
+Cuando se agrega un nuevo amigo a la lista, aparece con un efecto de fade-in.
+
+### 2️⃣ Efecto de "suspenso" al sortear
+
+Al presionar el botón de sorteo, primero aparece el mensaje "🤔 Sorteando..." parpadeando antes de mostrar el resultado.
+
+### 3️⃣ Efectos en los botones
+
+Los botones tienen una animación de hover y presión, dándoles una sensación interactiva.
+
+### 4️⃣ Efecto al limpiar la lista
+
+Al limpiar la lista de amigos, los nombres desaparecen suavemente antes de ser eliminados.
 
 ## 🚀 Cómo Usarlo
 
