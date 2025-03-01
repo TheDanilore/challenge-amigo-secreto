@@ -116,6 +116,7 @@ button {
     cursor: pointer;
 }
 
+/* Animacion de botones */
 button:hover {
     transform: scale(1.05);
 }
