@@ -1,4 +1,4 @@
-// Array para almacenar los nombres de los amigos
+//Array para almacenar los nombres de los amigos
 let amigos = [];
 
 //Funcion para asignar un li con valor a una lista
