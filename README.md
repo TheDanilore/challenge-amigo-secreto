@@ -3,8 +3,7 @@
 Este proyecto es parte del **Challenge Amigo Secreto** del programa **ONE G8 (Oracle Next Education)** de **Alura Latam y Oracle**.  
 Se trata de una aplicación en JavaScript que permite agregar nombres a una lista y seleccionar aleatoriamente un amigo secreto.
 
-![Captura de pantalla 2025-02-28 233733](https://github.com/user-attachments/assets/982fabca-7d46-4418-ad9d-e37d2f70837e)
-![Captura de pantalla 2025-02-28 233744](https://github.com/user-attachments/assets/879728ec-8b2c-4c59-ada5-8f3cb8db90e0)
+![Challenge Amigo Secreto](https://github.com/user-attachments/assets/288d0132-c080-4add-b0db-e68a32dd24a2)
 
 ---
 
