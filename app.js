@@ -34,7 +34,7 @@ function agregarAmigo() {
         return;
     }
 
-    // Se limpia el resultado si se agrega un nuevo amigo
+    //Se limpia el resultado si se agrega un nuevo amigo
     document.getElementById('resultado').innerHTML = '';
 
     // Se agrega el nombre al array de amigos
