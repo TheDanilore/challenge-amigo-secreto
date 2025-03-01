@@ -1,6 +1,6 @@
 
-
-function asignarTextoElemento(elemento, texto) {
+//Funcion para asignar un li con valor a una lista
+function asignarTextoLista(elemento, texto) {
     const lista = document.getElementById(elemento);
     //Se crea un nuevo elemento li
     const nuevoAmigo = document.createElement('li');
@@ -12,7 +12,7 @@ function asignarTextoElemento(elemento, texto) {
     return;
 }
 
-
+//Funcion para agregar un nombre de un amigo a la lista
 function agregarAmigo(){
     //Se obtiene el nombre que se escribio en el input
     const input = document.getElementById('amigo');
@@ -20,11 +20,16 @@ function agregarAmigo(){
     //Se le asigna el nombre en string a la variable nombreAmigo
     const nombreAmigo = input.value.trim();
 
-    if(nombreAmigo == ''){
+    if(nombreAmigo === ''){
         return alert("Debes ingresar un nombre")
     }
     
-    asignarTextoElemento('listaAmigos', `${nombreAmigo}`);
+    asignarTextoLista('listaAmigos', `${nombreAmigo}`);
     //Se limpia el input
     input.value = '';
+}
+
+//Funcion para sortear amigos
+function sortearAmigo(){
+    alert('Sorteando amigos...')
 }
